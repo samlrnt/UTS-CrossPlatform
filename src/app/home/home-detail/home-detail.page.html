@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Product Detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>      
+      <ion-col><ion-img [src]="loadedItem.imageUrl"></ion-img></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>{{loadedItem.brand}} {{loadedItem.model}}</h1>
+        <h2>Harga : Rp. {{loadedItem.price}}</h2>
+        <h3>Stock : {{loadedItem.stock}}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let det of detailsKey, let i = index">
+        {{det}}: {{this.detailsValue[i]}}
+    </ion-row>
+  </ion-grid>
+</ion-content>

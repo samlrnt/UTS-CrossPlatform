@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Admin</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of items" #slidingItem>
+      <ion-item-options side="start">
+        <ion-item-option (click)="updateItemSlide(item, slidingItem)">
+          <ion-icon name="newspaper-outline" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>               
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img [src]="item.imageUrl"></ion-img>
+        </ion-avatar>
+        <ion-text>
+          <ion-label>{{item.brand}} {{item.model}}</ion-label>
+          <ion-label>Rp. {{item.price}} </ion-label>
+          <ion-label>Sisa Stock : {{item.stock}}</ion-label>
+        </ion-text>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="presentAlert(item, slidingItem)" color="danger">
+          <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>   
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
