@@ -48,6 +48,29 @@ export class HomeService {
         'B350',
         'RyzenCPU',
       ]
+    },
+    {
+      id: 'item4',
+      imageUrl: 'https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/9/6309602/6309602_5b87a390-ceff-4c13-bc13-64d942bf9f6c_1000_1000.jpg',
+      brand: 'Kingston',
+      model: 'DDR4',
+      price: 453000,
+      stock: 3,
+      type: 'ram',
+      details:[
+        '2666MHz',
+        '8GB',
+      ]
+    },
+    {
+      id: 'item5',
+      imageUrl: 'https://assets.nvidia.partners/images/png/nvidia-geforce-rtx-3080.png',
+      brand: 'NVidia Geforce',
+      model: 'RTX3080',
+      price: 10000000,
+      type: 'GPU',
+      stock: 6,
+      details:[]
     }
   ];
 
